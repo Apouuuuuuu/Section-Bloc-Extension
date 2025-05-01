@@ -4,7 +4,7 @@
   "icon": "icon.png",
   "displayName": "Section Bloc",
   "description": "Add custom foldable code blocks using @section / @endsection tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "engines": {
     "vscode": "^1.70.0"
   },

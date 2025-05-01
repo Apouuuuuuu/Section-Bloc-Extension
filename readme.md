@@ -25,7 +25,7 @@ console.log("Start");
 ```
 Then click the folding arrow on the left to collapse or expand the block.  
 Works with many comment syntaxes: `//`, `#`, `<!-- -->`, `/* */`, etc.
-![Gif 1](https://github.com/user-attachments/assets/e59ed13a-28df-4ec1-9777-47eaac41a7d5)
+![Gif 1](https://cdn.discordapp.com/attachments/677252152946851860/1367479363326709830/Gif_2.gif?ex=6814bbe6&is=68136a66&hm=483ed67d04303217554460fd74e6ae9e1d59d1caae58de1b4b002a06189ad391&)
 
 ---
 
