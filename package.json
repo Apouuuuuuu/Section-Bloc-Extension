@@ -1,7 +1,7 @@
 {
   "name": "section-bloc",
   "displayName": "Section Bloc",
-  "description": "Ajoute des blocs de code repliables personnalisés avec des balises @section / @endsection",
+  "description": "Add custom foldable code blocks using @section / @endsection tags",
   "version": "1.0.0",
   "engines": {
     "vscode": "^1.70.0"
@@ -58,17 +58,17 @@
       "sectionBloc.enableHighlight": {
         "type": "boolean",
         "default": true,
-        "description": "Activer ou désactiver la surbrillance des lignes @section"
+        "description": "Enable or disable highlighting of @section lines"
       },
       "sectionBloc.highlightBackground": {
         "type": "string",
         "default": "#173f30",
-        "description": "Couleur de fond des lignes @section"
+        "description": "Background color of @section lines"
       },
       "sectionBloc.highlightForeground": {
         "type": "string",
         "default": "#d0f5d0",
-        "description": "Couleur du texte des lignes @section"
+        "description": "Text color of @section lines"
       }
     }
   }
