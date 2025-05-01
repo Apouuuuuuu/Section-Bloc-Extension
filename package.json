@@ -13,24 +13,30 @@
     "vscode:prepublish": "npm run compile",
     "package": "vsce package"
   },
-  "activationEvents": [
-    "onLanguage:python",
-    "onLanguage:javascript",
-    "onLanguage:typescript"
-  ],
-  "contributes": {
-    "languages": [
-      {
-        "id": "python"
-      },
-      {
-        "id": "javascript"
-      },
-      {
-        "id": "typescript"
-      }
-    ]
-  },
+"activationEvents": [
+  "onLanguage:python",
+  "onLanguage:javascript",
+  "onLanguage:typescript",
+  "onLanguage:html",
+  "onLanguage:css",
+  "onLanguage:php",
+  "onLanguage:java",
+  "onLanguage:shellscript",
+  "onLanguage:yaml"
+],
+"contributes": {
+  "languages": [
+    { "id": "python" },
+    { "id": "javascript" },
+    { "id": "typescript" },
+    { "id": "html" },
+    { "id": "css" },
+    { "id": "php" },
+    { "id": "java" },
+    { "id": "shellscript" },
+    { "id": "yaml" }
+  ]
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Apouuuuuuu/Section-Bloc.git"
