@@ -80,7 +80,68 @@ export function activate(context: vscode.ExtensionContext) {
     })
   );
 
+  const insertSectionCommand = vscode.commands.registerCommand('sectionBloc.insertSection', async () => {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) return;
+
+    const sectionName = await vscode.window.showInputBox({
+      prompt: 'Section name',
+      placeHolder: 'e.g. Initialization'
+    });
+
+    if (!sectionName) return;
+
+    const languageId = editor.document.languageId;
+    const prefix = getCommentPrefix(languageId);
+    const suffix = getCommentSuffix(languageId);
+
+    const snippet = `${prefix} @section: ${sectionName}${suffix}\n$0\n${prefix} @endsection${suffix}`;
+    editor.insertSnippet(new vscode.SnippetString(snippet));
+  });
+
+  context.subscriptions.push(insertSectionCommand);
+
   console.log('Section Bloc extension is now active!');
+}
+
+function getCommentPrefix(languageId: string): string {
+  switch (languageId) {
+    case 'python':
+    case 'shellscript':
+    case 'yaml':
+      return '#';
+    case 'html':
+    case 'xml':
+    case 'markdown':
+      return '<!--';
+    case 'css':
+    case 'scss':
+    case 'c':
+    case 'cpp':
+    case 'java':
+    case 'php':
+      return '/*';
+    default:
+      return '//';
+  }
+}
+
+function getCommentSuffix(languageId: string): string {
+  switch (languageId) {
+    case 'html':
+    case 'xml':
+    case 'markdown':
+      return ' -->';
+    case 'css':
+    case 'scss':
+    case 'c':
+    case 'cpp':
+    case 'java':
+    case 'php':
+      return ' */';
+    default:
+      return '';
+  }
 }
 
 export function deactivate() {}

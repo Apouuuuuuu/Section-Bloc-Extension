@@ -30,6 +30,12 @@
   "onLanguage:markdown"
 ],
 "contributes": {
+  "commands": [
+  {
+    "command": "sectionBloc.insertSection",
+    "title": "Section Bloc: Insert Section"
+  }
+],
   "languages": [
     { "id": "python" },
     { "id": "javascript" },
