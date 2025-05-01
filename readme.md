@@ -25,7 +25,7 @@ console.log("Start");
 ```
 Then click the folding arrow on the left to collapse or expand the block.  
 Works with many comment syntaxes: `//`, `#`, `<!-- -->`, `/* */`, etc.
-![Usage 1](https://raw.githubusercontent.com/Apouuuuuuu/Section-Bloc/main/demo/Usage_1.gif)
+![Gif 1](https://github.com/user-attachments/assets/e59ed13a-28df-4ec1-9777-47eaac41a7d5)
 
 ---
 
@@ -37,7 +37,7 @@ To quickly insert a new section block:
 2. Run: Section Bloc: Insert Section
 3. Enter a name like `Import`, `Auth`, or `Debug`
 4. The section will be inserted with the right comment style for your language
-![Usage 1](https://raw.githubusercontent.com/Apouuuuuuu/Section-Bloc/main/demo/Usage_2.gif)
+![Gif 2](https://github.com/user-attachments/assets/022e3d62-91a7-4483-9845-ca114136e881)
 
 ---
 
@@ -52,7 +52,7 @@ You can configure section highlighting colors from VS Code settings.
   - Highlight Background 🎨
   - Text Color 🖊️
 
-![Settings](https://raw.githubusercontent.com/Apouuuuuuu/Section-Bloc/main/demo/Settings.gif)
+![Gif 3](https://github.com/user-attachments/assets/e8596dff-c02b-4bf5-bd06-1b18ed63084f)
 
 ## 🧠 Supported Languages
 
