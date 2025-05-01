@@ -20,9 +20,14 @@
   "onLanguage:html",
   "onLanguage:css",
   "onLanguage:php",
+  "onLanguage:cpp",
+  "onLanguage:c",
   "onLanguage:java",
   "onLanguage:shellscript",
-  "onLanguage:yaml"
+  "onLanguage:jsonc",
+  "onLanguage:xml",
+  "onLanguage:yaml",
+  "onLanguage:markdown"
 ],
 "contributes": {
   "languages": [
@@ -32,11 +37,17 @@
     { "id": "html" },
     { "id": "css" },
     { "id": "php" },
+    { "id": "cpp" },
+    { "id": "c" },
     { "id": "java" },
     { "id": "shellscript" },
-    { "id": "yaml" }
+    { "id": "jsonc" },
+    { "id": "xml" },
+    { "id": "yaml" },
+    { "id": "markdown" }
   ]
-},
+}
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Apouuuuuuu/Section-Bloc.git"

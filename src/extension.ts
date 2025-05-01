@@ -8,10 +8,16 @@ export function activate(context: vscode.ExtensionContext) {
         'typescript',
         'html',
         'css',
+        'scss',
         'php',
+        'cpp',
+        'c',
         'java',
         'shellscript',
+        'jsonc',  
+        'xml',
         'yaml',
+        'markdown'
       ];
       
   for (const lang of supportedLanguages) {
