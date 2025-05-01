@@ -1,5 +1,6 @@
 {
   "name": "section-bloc",
+  "publisher": "apouuuuuuu",       
   "displayName": "Section Bloc",
   "description": "Add custom foldable code blocks using @section / @endsection tags",
   "version": "1.0.0",
