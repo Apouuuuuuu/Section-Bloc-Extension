@@ -25,7 +25,7 @@ console.log("Start");
 ```
 Then click the folding arrow on the left to collapse or expand the block.  
 Works with many comment syntaxes: `//`, `#`, `<!-- -->`, `/* */`, etc.
-![Gif 1](https://cdn.discordapp.com/attachments/677252152946851860/1367479363326709830/Gif_2.gif?ex=6814bbe6&is=68136a66&hm=483ed67d04303217554460fd74e6ae9e1d59d1caae58de1b4b002a06189ad391&)
+![Gif 1](https://media.discordapp.net/attachments/677252152946851860/1367479364077359215/Gif_1.gif?ex=6814bbe6&is=68136a66&hm=c62703b1d3d3c322ca9a62f1e49787172ccfcb62f2148f7e79c3a06b94259912&=)
 
 ---
 
@@ -37,7 +37,7 @@ To quickly insert a new section block:
 2. Run: Section Bloc: Insert Section
 3. Enter a name like `Import`, `Auth`, or `Debug`
 4. The section will be inserted with the right comment style for your language
-![Gif 2](https://github.com/user-attachments/assets/022e3d62-91a7-4483-9845-ca114136e881)
+![Gif 2](https://media.discordapp.net/attachments/677252152946851860/1367479363326709830/Gif_2.gif?ex=6814bbe6&is=68136a66&hm=483ed67d04303217554460fd74e6ae9e1d59d1caae58de1b4b002a06189ad391&=)
 
 ---
 
@@ -52,7 +52,7 @@ You can configure section highlighting colors from VS Code settings.
   - Highlight Background 🎨
   - Text Color 🖊️
 
-![Gif 3](https://github.com/user-attachments/assets/e8596dff-c02b-4bf5-bd06-1b18ed63084f)
+![Gif 3](https://media.discordapp.net/attachments/677252152946851860/1367479364727341086/Gif_3.gif?ex=6814bbe7&is=68136a67&hm=85b6a1c93ab1ba45b73d947d4f1396ea3e0ea9c1501b4f26057ef8c77d0ec0de&=)
 
 ## 🧠 Supported Languages
 
