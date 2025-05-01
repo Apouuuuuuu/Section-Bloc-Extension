@@ -36,7 +36,7 @@ export function activate(context: vscode.ExtensionContext) {
   const updateDecorations = (editor: vscode.TextEditor | undefined) => {
     if (!editor || !sectionDecoration) return;
 
-    const regEx = /@section:/;
+    const regEx = /^\s*(\/\/|#|<!--|\/\*|\*)\s*@section:/;
     const decorations: vscode.DecorationOptions[] = [];
 
     for (let i = 0; i < editor.document.lineCount; i++) {
