@@ -2,7 +2,6 @@ import * as vscode from 'vscode';
 import { SectionFoldingProvider } from './sectionFoldingProvider';
 import * as path from 'path';
 
-
 export function activate(context: vscode.ExtensionContext) {
   const supportedLanguages = [
     'python',
@@ -30,18 +29,28 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(provider);
   }
 
-  // Decoration for start section lines
-  const sectionDecoration = vscode.window.createTextEditorDecorationType({
-    gutterIconPath: vscode.Uri.file(
+  const config = vscode.workspace.getConfiguration('sectionBloc');
+  const enableHighlight = config.get<boolean>('enableHighlight', true);
+  const backgroundColor = config.get<string>('highlightBackground', '#173f30');
+  const foregroundColor = config.get<string>('highlightForeground', '#d0f5d0');
+
+  let sectionDecoration: vscode.TextEditorDecorationType | undefined;
+
+  if (enableHighlight) {
+    sectionDecoration = vscode.window.createTextEditorDecorationType({
+      isWholeLine: true,
+      backgroundColor,
+      color: foregroundColor,
+      gutterIconPath: vscode.Uri.file(
         path.join(context.extensionPath, 'resources', 'section-icon.svg')
       ),
-    gutterIconSize: 'contain',
-    fontWeight: 'bold',
-    color: new vscode.ThemeColor('editorLineNumber.foreground')
-  });
+      gutterIconSize: 'contain',
+    });
+  }
 
   const updateDecorations = (editor: vscode.TextEditor | undefined) => {
-    if (!editor) return;
+    if (!editor || !sectionDecoration) return;
+
     const regEx = /@section:/;
     const decorations: vscode.DecorationOptions[] = [];
 

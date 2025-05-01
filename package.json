@@ -45,9 +45,28 @@
     { "id": "xml" },
     { "id": "yaml" },
     { "id": "markdown" }
-  ]
-}
-,
+  ],
+  "configuration": {
+    "title": "Section Bloc",
+    "properties": {
+      "sectionBloc.enableHighlight": {
+        "type": "boolean",
+        "default": true,
+        "description": "Activer ou désactiver la surbrillance des lignes @section"
+      },
+      "sectionBloc.highlightBackground": {
+        "type": "string",
+        "default": "#173f30",
+        "description": "Couleur de fond des lignes @section"
+      },
+      "sectionBloc.highlightForeground": {
+        "type": "string",
+        "default": "#d0f5d0",
+        "description": "Couleur du texte des lignes @section"
+      }
+    }
+  }
+},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Apouuuuuuu/Section-Bloc.git"
