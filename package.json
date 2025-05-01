@@ -1,0 +1,59 @@
+{
+  "name": "section-bloc",
+  "displayName": "Section Bloc",
+  "description": "Ajoute des blocs de code repliables personnalisés avec des balises @section / @endsection",
+  "version": "1.0.0",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "main": "./out/extension.js",
+  "scripts": {
+    "compile": "tsc -p .",
+    "watch": "tsc -watch -p .",
+    "vscode:prepublish": "npm run compile",
+    "package": "vsce package"
+  },
+  "activationEvents": [
+    "onLanguage:python",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "python"
+      },
+      {
+        "id": "javascript"
+      },
+      {
+        "id": "typescript"
+      }
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Apouuuuuuu/Section-Bloc.git"
+  },
+  "keywords": [
+    "folding",
+    "section",
+    "comment",
+    "python",
+    "javascript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Apouuuuuuu/Section-Bloc/issues"
+  },
+  "homepage": "https://github.com/Apouuuuuuu/Section-Bloc#readme",
+  "dependencies": {
+    "vscode": "^1.1.37"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3",
+    "vsce": "^2.15.0"
+  }
+}
