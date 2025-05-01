@@ -38,7 +38,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   if (enableHighlight) {
     sectionDecoration = vscode.window.createTextEditorDecorationType({
-      isWholeLine: true,
+      isWholeLine: false,
       backgroundColor,
       color: foregroundColor,
       gutterIconPath: vscode.Uri.file(
