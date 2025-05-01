@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { SectionFoldingProvider } from './sectionFoldingProvider';
 import * as path from 'path';
 
+let sectionDecoration: vscode.TextEditorDecorationType | undefined;
+
 export function activate(context: vscode.ExtensionContext) {
   const supportedLanguages = [
     'python',
@@ -29,24 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
     context.subscriptions.push(provider);
   }
 
-  const config = vscode.workspace.getConfiguration('sectionBloc');
-  const enableHighlight = config.get<boolean>('enableHighlight', true);
-  const backgroundColor = config.get<string>('highlightBackground', '#173f30');
-  const foregroundColor = config.get<string>('highlightForeground', '#d0f5d0');
-
-  let sectionDecoration: vscode.TextEditorDecorationType | undefined;
-
-  if (enableHighlight) {
-    sectionDecoration = vscode.window.createTextEditorDecorationType({
-      isWholeLine: false,
-      backgroundColor,
-      color: foregroundColor,
-      gutterIconPath: vscode.Uri.file(
-        path.join(context.extensionPath, 'resources', 'section-icon.svg')
-      ),
-      gutterIconSize: 'contain',
-    });
-  }
+  sectionDecoration = createSectionDecoration(context);
 
   const updateDecorations = (editor: vscode.TextEditor | undefined) => {
     if (!editor || !sectionDecoration) return;
@@ -80,6 +65,16 @@ export function activate(context: vscode.ExtensionContext) {
     })
   );
 
+  vscode.workspace.onDidChangeConfiguration(event => {
+    if (event.affectsConfiguration('sectionBloc')) {
+      if (sectionDecoration) sectionDecoration.dispose();
+      sectionDecoration = createSectionDecoration(context);
+      if (vscode.window.activeTextEditor) {
+        updateDecorations(vscode.window.activeTextEditor);
+      }
+    }
+  });
+
   const insertSectionCommand = vscode.commands.registerCommand('sectionBloc.insertSection', async () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) return;
@@ -102,6 +97,24 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(insertSectionCommand);
 
   console.log('Section Bloc extension is now active!');
+}
+
+function createSectionDecoration(context: vscode.ExtensionContext): vscode.TextEditorDecorationType | undefined {
+  const config = vscode.workspace.getConfiguration('sectionBloc');
+  const enable = config.get<boolean>('enableHighlight', true);
+  if (!enable) return undefined;
+
+  const background = config.get<string>('highlightBackground', '#173f30');
+  const foreground = config.get<string>('highlightForeground', '#d0f5d0');
+
+  return vscode.window.createTextEditorDecorationType({
+    backgroundColor: background,
+    color: foreground,
+    gutterIconPath: vscode.Uri.file(
+      path.join(context.extensionPath, 'resources', 'section-icon.svg')
+    ),
+    gutterIconSize: 'contain'
+  });
 }
 
 function getCommentPrefix(languageId: string): string {
