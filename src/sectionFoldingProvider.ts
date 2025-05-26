@@ -19,6 +19,7 @@ export class SectionFoldingProvider implements vscode.FoldingRangeProvider {
         .replace(/\*\/$/, '')    // */
         .replace(/^<!--/, '')    // <!--
         .replace(/-->$/, '')     // -->
+        .replace(/^;/, '') 
         .trim();
 
       // Detection start

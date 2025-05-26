@@ -4,7 +4,7 @@
   "icon": "icon.png",
   "displayName": "Section Bloc",
   "description": "Add custom foldable code blocks using @section / @endsection tags",
-  "version": "1.0.4",
+  "version": "1.0.3",
   "engines": {
     "vscode": "^1.70.0"
   },
@@ -29,7 +29,8 @@
   "onLanguage:jsonc",
   "onLanguage:xml",
   "onLanguage:yaml",
-  "onLanguage:markdown"
+  "onLanguage:markdown",
+  "onLanguage:ahk"
 ],
 "contributes": {
   "commands": [
@@ -52,7 +53,8 @@
     { "id": "jsonc" },
     { "id": "xml" },
     { "id": "yaml" },
-    { "id": "markdown" }
+    { "id": "markdown" },
+    { "id": "ahk" }
   ],
   "configuration": {
     "title": "Section Bloc",

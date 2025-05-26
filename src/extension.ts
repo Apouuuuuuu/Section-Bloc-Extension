@@ -20,7 +20,8 @@ export function activate(context: vscode.ExtensionContext) {
     'jsonc',
     'xml',
     'yaml',
-    'markdown'
+    'markdown',
+    'ahk'
   ];
 
   for (const lang of supportedLanguages) {
@@ -36,7 +37,7 @@ export function activate(context: vscode.ExtensionContext) {
   const updateDecorations = (editor: vscode.TextEditor | undefined) => {
     if (!editor || !sectionDecoration) return;
 
-    const regEx = /^\s*(\/\/|#|<!--|\/\*|\*)\s*@section:/;
+    const regEx = /^\s*(\/\/|#|<!--|\/\*|\*|;)\s*@section:/;
     const decorations: vscode.DecorationOptions[] = [];
 
     for (let i = 0; i < editor.document.lineCount; i++) {
@@ -123,6 +124,8 @@ function getCommentPrefix(languageId: string): string {
     case 'shellscript':
     case 'yaml':
       return '#';
+    case 'ahk':
+      return ';';
     case 'html':
     case 'xml':
     case 'markdown':
