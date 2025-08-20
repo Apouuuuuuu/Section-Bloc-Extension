@@ -1,6 +1,6 @@
 {
   "name": "section-bloc",
-  "publisher": "apouuuuuuu",       
+  "publisher": "apouuuuuuu",
   "icon": "icon.png",
   "displayName": "Section Bloc",
   "description": "Add custom foldable code blocks using @section / @endsection tags",
@@ -15,68 +15,106 @@
     "vscode:prepublish": "npm run compile",
     "package": "vsce package"
   },
-"activationEvents": [
-  "onLanguage:python",
-  "onLanguage:javascript",
-  "onLanguage:typescript",
-  "onLanguage:html",
-  "onLanguage:css",
-  "onLanguage:php",
-  "onLanguage:cpp",
-  "onLanguage:c",
-  "onLanguage:java",
-  "onLanguage:shellscript",
-  "onLanguage:jsonc",
-  "onLanguage:xml",
-  "onLanguage:yaml",
-  "onLanguage:markdown",
-  "onLanguage:ahk"
-],
-"contributes": {
-  "commands": [
-  {
-    "command": "sectionBloc.insertSection",
-    "title": "Section Bloc: Insert Section"
-  }
-],
-  "languages": [
-    { "id": "python" },
-    { "id": "javascript" },
-    { "id": "typescript" },
-    { "id": "html" },
-    { "id": "css" },
-    { "id": "php" },
-    { "id": "cpp" },
-    { "id": "c" },
-    { "id": "java" },
-    { "id": "shellscript" },
-    { "id": "jsonc" },
-    { "id": "xml" },
-    { "id": "yaml" },
-    { "id": "markdown" },
-    { "id": "ahk" }
+  "activationEvents": [
+    "onLanguage:python",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:html",
+    "onLanguage:css",
+    "onLanguage:php",
+    "onLanguage:cpp",
+    "onLanguage:c",
+    "onLanguage:java",
+    "onLanguage:shellscript",
+    "onLanguage:jsonc",
+    "onLanguage:xml",
+    "onLanguage:yaml",
+    "onLanguage:markdown",
+    "onLanguage:ahk"
   ],
-  "configuration": {
-    "title": "Section Bloc",
-    "properties": {
-      "sectionBloc.enableHighlight": {
-        "type": "boolean",
-        "default": true,
-        "description": "Enable or disable highlighting of @section lines"
+  "contributes": {
+    "commands": [
+      {
+        "command": "sectionBloc.insertSection",
+        "title": "Section Bloc: Insert Section"
+      }
+    ],
+    "languages": [
+      {
+        "id": "python"
       },
-      "sectionBloc.highlightBackground": {
-        "type": "string",
-        "default": "#173f30",
-        "description": "Background color of @section lines"
+      {
+        "id": "javascript"
       },
-      "sectionBloc.highlightForeground": {
-        "type": "string",
-        "default": "#d0f5d0",
-        "description": "Text color of @section lines"
+      {
+        "id": "javascriptreact"
+      },
+      {
+        "id": "typescript"
+      },
+      {
+        "id": "typescriptreact"
+      },
+      {
+        "id": "html"
+      },
+      {
+        "id": "css"
+      },
+      {
+        "id": "php"
+      },
+      {
+        "id": "cpp"
+      },
+      {
+        "id": "c"
+      },
+      {
+        "id": "java"
+      },
+      {
+        "id": "shellscript"
+      },
+      {
+        "id": "jsonc"
+      },
+      {
+        "id": "xml"
+      },
+      {
+        "id": "yaml"
+      },
+      {
+        "id": "markdown"
+      },
+      {
+        "id": "ahk"
+      }
+    ],
+    "configuration": {
+      "title": "Section Bloc",
+      "properties": {
+        "sectionBloc.enableHighlight": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable or disable highlighting of @section lines"
+        },
+        "sectionBloc.highlightBackground": {
+          "type": "string",
+          "default": "#173f30",
+          "description": "Background color of @section lines"
+        },
+        "sectionBloc.highlightForeground": {
+          "type": "string",
+          "default": "#d0f5d0",
+          "description": "Text color of @section lines"
+        }
       }
     }
-  }
-},
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Apouuuuuuu/Section-Bloc.git"
@@ -95,9 +133,9 @@
   },
   "homepage": "https://github.com/Apouuuuuuu/Section-Bloc#readme",
   "devDependencies": {
-    "vscode": "^1.1.37",
-    "@types/node": "^22.15.3",
-    "typescript": "^5.8.3",
-    "vsce": "^2.15.0"
+    "@types/node": "^22.17.2",
+    "typescript": "^5.9.2",
+    "vsce": "^1.97.0",
+    "vscode": "^1.1.34"
   }
 }

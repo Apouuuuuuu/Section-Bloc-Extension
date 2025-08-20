@@ -8,7 +8,9 @@ export function activate(context: vscode.ExtensionContext) {
   const supportedLanguages = [
     'python',
     'javascript',
+    'javascriptreact',
     'typescript',
+    'typescriptreact',
     'html',
     'css',
     'scss',
