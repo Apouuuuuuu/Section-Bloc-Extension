@@ -1,7 +1,8 @@
 # 🧩 Section Bloc
 
 **Section Bloc** is a lightweight VS Code extension that lets you create custom, foldable code sections using `@section:` comments.  
-🔗 [View on GitHub](https://github.com/Apouuuuuuu/Section-Bloc)
+🔗 [View on GitHub](https://github.com/Apouuuuuuu/Section-Bloc)  
+🔗 [View on VS marketplace (FREE) ](https://marketplace.visualstudio.com/items?itemName=apouuuuuuu.section-bloc)
 
 
 ---
